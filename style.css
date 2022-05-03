@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+:root {
+    /* THEME 1 */
+    --theme1-bg: hsl(222, 26%, 31%);
+    --theme1-keypad-bg: hsl(223, 31%, 20%);
+    --theme1-screen-bg: hsl(224, 36%, 15%);
+    --theme1-key-bg: hsl(225, 21%, 49%);
+    --theme1-key-shadow: hsl(224, 28%, 35%);
+    --theme1-red: hsl(6, 63%, 50%);
+    --theme1-dark-red: hsl(6, 70%, 34%);
+    --theme1-gray-orange: hsl(30, 25%, 89%);
+    --theme1-orange-shadow: hsl(28, 16%, 65%);
+    --theme1-text-dark: hsl(221, 14%, 31%);
+    --theme1-text-white: #FFF;
+
+    /* THEME 2 */
+    --theme2-bg: hsl(0, 0%, 90%);
+    --theme2-keypad-bg: hsl(0, 5%, 81%);
+    --theme2-screen-bg: hsl(0, 0%, 93%);
+    --theme2-key-bg: hsl(185, 42%, 37%);
+    --theme2-key-shadow: hsl(185, 58%, 25%);
+    --theme2-orange: hsl(25, 98%, 40%);
+    --theme2-dark-orange: hsl(25, 99%, 27%);
+    --theme2-gray-yellow: hsl(45, 7%, 89%);
+    --theme2-gray-orange: hsl(35, 11%, 61%);
+    --theme2-text: hsl(60, 10%, 19%);
+    --theme2-white: hsl(0, 0, 100%);
+
+    /* THEME 3 */
+    --theme3-bg: hsl(268, 75%, 9%);
+    --theme3-keypad-bg: hsl(268, 71%, 12%);
+    --theme3-key-bg: hsl(281, 89%, 26%);
+    --theme3-key-shadow: hsl(285, 91%, 52%);
+    --theme3-toggle: hsl(176, 100%, 44%);
+    --theme3-toggle-shadow: hsl(177, 92%, 70%);
+    --theme3-dark-violet: hsl(268, 47%, 21%);
+    --theme3-dark-shadow: hsl(290, 70%, 36%);
+    --theme3-text-yellow: hsl(52, 100%, 62%);
+    --theme3-text-blue: hsl(198, 20%, 13%);
+    --theme3-text-white: hsl(0, 0, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 13px;
+    background-color: var(--theme1-bg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    width: 35%;
+}
+
+.calculator h4 {
+    color: var(--theme1-text-white);
+    font-size: 32px;
+}
+
+.calculator-screen {
+    background-color: var(--theme1-screen-bg);
+    color: var(--theme1-text-white);
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.calculator-screen h2 {
+    font-size: 48px;
+}
+
+.calculator-body {
+    background-color: var(--theme1-keypad-bg);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.key {
+    border: none;
+    background: none;
+    background-color: var(--theme1-gray-orange);
+    color: var(--theme1-text-dark);
+    width: 100px;
+    height: 64px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 800;
+    cursor: pointer;
+
+    box-shadow: inset 0px -4px 0px var(--theme1-orange-shadow);
+}
+
+.key:hover {
+    background-color: var(--theme1-text-white);
+}
+
+.key.primary {
+    background-color: var(--theme1-key-bg);
+    color: var(--theme1-text-white);
+    box-shadow: inset 0px -4px 0px var(--theme1-key-shadow);
+    font-size: 20px;
+}
+
+.key.secondary {
+    background-color: var( --theme1-red);
+    color: var(--theme1-text-white);
+    box-shadow: inset 0px -4px 0px var(--theme1-dark-red);
+}
+
+.key.lg {
+    width: 220px;
+}
+
+@media(max-width: 860px) {
+    body {
+        height: 100%;
+    }
+    .calculator {
+        width: 90%;
+    }
+}
