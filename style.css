@@ -82,6 +82,10 @@ body {
     font-size: 48px;
 }
 
+.calculator-screen .answer {
+    display: none;
+}
+
 .calculator-body {
     background-color: var(--theme1-keypad-bg);
     display: flex;
